@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  Rutika
 
 steps:
 - script: echo Hello, world!
@@ -17,3 +17,10 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: UiPathRunJob@4
+  inputs:
+    orchestratorConnection: 'CONNECTION'
+    processName: 'TESTAZURE'
+    folderName: 'testfolder'
+    jobType: 'TestAutomation'
+    user: 'izd01\t50381'
